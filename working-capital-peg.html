@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Negotiate Your Working Capital Peg at the LOI · Martin Pavlovic</title>
+<meta name="description" content="A working capital peg moves money after closing in 89% of deals that use one. Learn what to settle in your LOI before exclusivity, from method to disputes.">
+<meta property="og:title" content="Negotiate Your Working Capital Peg at the LOI">
+<meta property="og:description" content="A working capital peg moves money after closing in 89% of deals that use one. Learn what to settle in your LOI before exclusivity, from method to disputes.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+<script>
+try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--tile:#F3F4F1;--line:#E3E6E0;--ink:#01120E;--muted:#4F5C57;
+  --accent:#008CFF;--on-accent:#01120E;
+  --inv-bg:#01120E;--inv-fg:#FFFFFF;--inv-muted:#B7C6BF;
+  --nav-bg:rgba(255,255,255,.82);--r:28px;
+}
+[data-theme="dark"]{
+  --bg:#01120E;--tile:#0C221C;--line:#183329;--ink:#F2F6F4;--muted:#A5BAB2;
+  --inv-bg:#F2F6F4;--inv-fg:#01120E;--inv-muted:#41504A;--nav-bg:rgba(1,18,14,.82);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.55;letter-spacing:-.006em;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s,color .35s}
+::selection{background:var(--accent);color:var(--on-accent)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+
+.top{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;max-width:calc(100vw - 24px);background:var(--nav-bg);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid var(--line)}
+.top a{white-space:nowrap;text-decoration:none;font-size:16px;font-weight:500;padding:9px 16px;border-radius:999px;color:var(--muted);transition:.25s}
+.top a:hover{color:var(--ink)}
+.top a.home{background:var(--accent);color:var(--on-accent)}
+
+.theme-btn{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;border:0;background:#008CFF;color:#01120E;font:700 18.7px/1 'Inter',system-ui,sans-serif;letter-spacing:-.01em;cursor:pointer;box-shadow:0 14px 34px -10px rgba(0,140,255,.65),0 2px 6px rgba(1,18,14,.2);transition:transform .25s,box-shadow .25s}
+.theme-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,140,255,.75),0 2px 6px rgba(1,18,14,.2)}
+.theme-btn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.theme-btn svg{width:22px;height:22px;flex:none}
+
+article{padding-top:120px}
+.head{max-width:960px;margin:0 auto}
+.label{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;color:var(--muted);margin-bottom:18px}
+.label::before{content:"";width:13px;height:13px;border-radius:4px;background:var(--accent)}
+h1{font-weight:800;letter-spacing:-.05em;line-height:.95;font-size:clamp(40px,7vw,92px)}
+.standfirst{font-size:clamp(19px,2vw,25px);line-height:1.4;color:var(--muted);margin-top:26px;letter-spacing:-.015em;max-width:44ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:16px;font-weight:600;color:var(--muted)}
+.meta span+span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-right:18px;vertical-align:middle}
+.cover{max-width:1100px;margin:44px auto 0}
+.cover img{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line);background:#fff}
+.cover figcaption{font-size:16px;color:var(--muted);margin-top:12px;max-width:960px}
+
+.prose{max-width:720px;margin:56px auto 0;font-size:19px;line-height:1.7}
+.prose>*+*{margin-top:1.15em}
+.prose h2{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-top:2.2em}
+.prose h3{font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-top:1.9em}
+.prose h2+*,.prose h3+*{margin-top:.8em}
+.prose a{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:3px;transition:background .2s}
+.prose a:hover{background:color-mix(in srgb,var(--accent) 22%,transparent)}
+.prose ul,.prose ol{padding-left:1.4em}
+.prose li+li{margin-top:.5em}
+.prose li::marker{color:var(--accent);font-weight:700}
+.prose blockquote{background:var(--tile);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:20px;padding:22px 26px;font-size:21px;line-height:1.45;font-weight:500;letter-spacing:-.015em}
+.prose blockquote p+p{margin-top:.6em}
+.prose strong{font-weight:700}
+.prose table{width:100%;border-collapse:separate;border-spacing:0;font-size:17px;line-height:1.45;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:block;overflow-x:auto}
+.prose th,.prose td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.prose th{background:var(--tile);font-weight:700}
+.prose tr:last-child td{border-bottom:0}
+.prose figure,.prose .chart{max-width:none}
+.prose figure{background:transparent}
+.prose svg{display:block;max-width:100%;height:auto}
+.prose figure{margin-left:-0px}
+.chart{margin-top:1.8em!important;margin-bottom:1.8em}
+.chart-in svg{width:100%;height:auto}
+@media(max-width:700px){
+  .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:18px;padding:6px}
+  .chart::before{content:"Scroll sideways to see the full chart";display:block;font-size:16px;font-weight:600;color:var(--muted);padding:8px 10px 2px}
+  .chart-in{min-width:760px}
+}
+@media(min-width:1000px){
+  .prose figure,.prose .chart{margin-left:-80px;margin-right:-80px}
+}
+
+.next{max-width:960px;margin:88px auto 0}
+.tile{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:34px;display:flex;flex-direction:column;gap:22px}
+.tile h2{font-size:clamp(28px,3.6vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid transparent;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--inv-bg);color:var(--inv-fg)}
+.btn.ghost{border-color:currentColor}
+footer{padding:56px 0 110px;color:var(--muted);font-size:16px;text-align:center}
+@media(max-width:640px){
+  .wrap{padding:0 16px}
+  article{padding-top:104px}
+  .theme-btn{right:14px;bottom:14px;padding:13px 20px}
+  .tile{padding:24px;border-radius:24px}
+  .prose{font-size:18px}
+  .top a{padding:9px 12px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Site">
+  <a class="home" href="../index.html">Portfolio</a>
+  <a href="../index.html#blog">All posts</a>
+  <a href="../index.html#contact">Contact</a>
+</nav>
+
+<button class="theme-btn" id="mode" type="button" aria-label="Switch to dark mode"><span class="ico" aria-hidden="true"></span><span class="lbl">Dark mode</span></button>
+
+<main class="wrap">
+<article>
+  <header class="head">
+    <div class="label">Blog</div>
+    <h1>Negotiate Your Working Capital Peg at the LOI</h1>
+    <p class="standfirst">The price on your letter of intent assumes a normal level of working capital in the business on closing day. Who defines "normal," and when, decides how much of that price reaches your bank account.</p>
+    <div class="meta"><span>By Martin Pavlovic</span><span>M&A, sell-side</span><span>7 min read</span></div>
+  </header>
+  <figure class="cover"><img src="../img/blog-working-capital-peg.webp" alt="A signed letter of intent beside a wire confirmation for a lower amount, showing the working capital peg gap" width="1200" height="630"><figcaption>Illustrative: a $200,000 working capital claim, 1% of a $20M sale. About 20% of final claims reach 1% of transaction value or more (SRS Acquiom, 2026).</figcaption></figure>
+  <div class="prose">
+
+<p>In SRS Acquiom's data, almost every private-target M&amp;A deal now ends with a working capital true-up, and most of those true-ups move money after closing. The firm's <a href="https://learn.srsacquiom.com/rs/664-KLJ-520/images/SRSAcquiom-2026-Working-Capital-PPA-Study.pdf" target="_blank" rel="noopener">2026 M&amp;A Working Capital PPA Study</a> covered more than 1,570 private deals. It found that 91% carried a purchase price adjustment, and 89% of those adjustments ended in a payment. More of those payments went to buyers than to sellers.</p>
+<p>The working capital peg decides which way the check goes. You have the most say over it before you sign the LOI (letter of intent). After you grant a buyer exclusivity, the peg's definition gets written during documentation, often by the buyer's counsel, at a point when you've stopped talking to anyone else.</p>
+<p>If you've read our post on <a href="https://embarcadvisors.com/deal-structure-vs-valuation/" target="_blank" rel="noopener">why deal structure matters more than valuation</a>, this is the same lesson applied to a line that's easy to skim. Owners spend weeks on the headline multiple, yet on a $20M deal the peg can move $200,000 or more. Fixing it costs little. You settle the method, the definitions and the timing in the LOI, while a second buyer still matters.</p>
+<h2>What the working capital peg is</h2>
+<p>Most deals are priced cash-free, debt-free. You keep the cash, you pay off the debt, and the buyer gets a business that can run on day one without writing an extra check to fund it. Working capital is the money tied up in running it day to day.</p>
+<p>Net working capital (NWC) in a deal means current assets minus current liabilities, with cash and debt taken out. In practice that's mostly receivables, inventory and prepaid expenses, minus payables and accrued expenses. The deal definition and your accountant's balance sheet often differ, and that difference is where the arguments start.</p>
+<p>The peg is the level of NWC you and the buyer agree the business normally needs. At closing, your actual NWC is measured against it. If you deliver less, the price drops dollar for dollar. If you deliver more, the price usually rises by the difference.</p>
+<p>So a $200,000 gap between the peg and your closing balance sheet is a $200,000 change in your proceeds. No multiple applies, and your EBITDA (earnings before interest, taxes, depreciation and amortization) never enters the math.</p>
+<h2>How often the working capital peg costs you</h2>
+<figure class="mp-wcpeg-direction" style="margin:0 0 1.5em"><style>.mp-wcpeg-direction .mp-m{display:none}@media (max-width:560px){.mp-wcpeg-direction .mp-d{display:none}.mp-wcpeg-direction .mp-m{display:block}}</style><div class="mp-d"><svg id="mp-wcpeg-direction-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 463" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-direction-light-t mp-wcpeg-direction-light-d"><title id="mp-wcpeg-direction-light-t">Who the final working capital adjustment favored</title><desc id="mp-wcpeg-direction-light-d">Bar chart from the SRS Acquiom 2026 study: 51% of final adjustments were buyer claims, 38% seller surpluses, 11% no adjustment.</desc><style>#mp-wcpeg-direction-light text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-direction-light .b{font-weight:800}#mp-wcpeg-direction-light .s{font-weight:600}#mp-wcpeg-direction-light .m{fill:var(--muted);font-weight:500}#mp-wcpeg-direction-light .w{fill:var(--inv-fg)}#mp-wcpeg-direction-light .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-direction-light .c{text-anchor:middle}#mp-wcpeg-direction-light .e{text-anchor:end}#mp-wcpeg-direction-light .tile{fill:var(--tile)}#mp-wcpeg-direction-light .dark{fill:var(--inv-bg)}#mp-wcpeg-direction-light .acc{fill:var(--accent)}#mp-wcpeg-direction-light .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-direction-light .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-direction-light .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-direction-light .f17{font-size:17px}#mp-wcpeg-direction-light .f16{font-size:16px}#mp-wcpeg-direction-light .f15{font-size:15px}#mp-wcpeg-direction-light .f14{font-size:14px}#mp-wcpeg-direction-light .f24{font-size:24px}</style><rect width="640" height="463" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">Who the final adjustment favored</tspan></text><text x="24" y="68" class="m f15"><tspan x="24" dy="0">Deals with a working capital adjustment clause, closed 2020 to Q3 2025</tspan></text><text x="24" y="98" class="s f17">Buyer claims</text><text x="24" y="118" class="m f14">You pay money back</text><rect x="24" y="130" width="528" height="44" rx="22" class="dark"/><text x="564" y="161" class="b f22">51%</text><text x="24" y="204" class="s f17">Seller surpluses</text><text x="24" y="224" class="m f14">The buyer pays you more</text><rect x="24" y="236" width="393" height="44" rx="22" class="acc"/><text x="429" y="267" class="b f22">38%</text><text x="24" y="310" class="s f17">No adjustment</text><text x="24" y="330" class="m f14">Closing lands on the peg</text><rect x="24" y="342" width="114" height="44" rx="22" class="none"/><text x="150" y="373" class="b f22">11%</text><text x="24" y="420" class="m f14"><tspan x="24" dy="0">Source: SRS Acquiom, 2026 M&amp;A Working Capital Purchase Price Adjustment</tspan><tspan x="24" dy="19">Study (1,570+ deals)</tspan></text></svg></div><div class="mp-m"><svg id="mp-wcpeg-direction-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 530" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-direction-mobile-t mp-wcpeg-direction-mobile-d"><title id="mp-wcpeg-direction-mobile-t">Who the final working capital adjustment favored</title><desc id="mp-wcpeg-direction-mobile-d">Bar chart from the SRS Acquiom 2026 study: 51% of final adjustments were buyer claims, 38% seller surpluses, 11% no adjustment.</desc><style>#mp-wcpeg-direction-mobile text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-direction-mobile .b{font-weight:800}#mp-wcpeg-direction-mobile .s{font-weight:600}#mp-wcpeg-direction-mobile .m{fill:var(--muted);font-weight:500}#mp-wcpeg-direction-mobile .w{fill:var(--inv-fg)}#mp-wcpeg-direction-mobile .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-direction-mobile .c{text-anchor:middle}#mp-wcpeg-direction-mobile .e{text-anchor:end}#mp-wcpeg-direction-mobile .tile{fill:var(--tile)}#mp-wcpeg-direction-mobile .dark{fill:var(--inv-bg)}#mp-wcpeg-direction-mobile .acc{fill:var(--accent)}#mp-wcpeg-direction-mobile .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-direction-mobile .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-direction-mobile .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-direction-mobile .f17{font-size:17px}#mp-wcpeg-direction-mobile .f16{font-size:16px}#mp-wcpeg-direction-mobile .f15{font-size:15px}#mp-wcpeg-direction-mobile .f14{font-size:14px}#mp-wcpeg-direction-mobile .f24{font-size:24px}</style><rect width="400" height="530" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">Who the final adjustment</tspan><tspan x="24" dy="28">favored</tspan></text><text x="24" y="96" class="m f15"><tspan x="24" dy="0">Deals with a working capital adjustment</tspan><tspan x="24" dy="20">clause, closed 2020 to Q3 2025</tspan></text><text x="24" y="146" class="s f17">Buyer claims</text><text x="24" y="166" class="m f14">You pay money back</text><rect x="24" y="178" width="288" height="44" rx="22" class="dark"/><text x="324" y="209" class="b f22">51%</text><text x="24" y="252" class="s f17">Seller surpluses</text><text x="24" y="272" class="m f14">The buyer pays you more</text><rect x="24" y="284" width="215" height="44" rx="22" class="acc"/><text x="251" y="315" class="b f22">38%</text><text x="24" y="358" class="s f17">No adjustment</text><text x="24" y="378" class="m f14">Closing lands on the peg</text><rect x="24" y="390" width="62" height="44" rx="22" class="none"/><text x="98" y="421" class="b f22">11%</text><text x="24" y="468" class="m f14"><tspan x="24" dy="0">Source: SRS Acquiom, 2026 M&amp;A Working</tspan><tspan x="24" dy="19">Capital Purchase Price Adjustment Study</tspan><tspan x="24" dy="19">(1,570+ deals)</tspan></text></svg></div></figure>
+<p>The typical adjustment is small. In the SRS Acquiom data, final buyer claims averaged 0.76% of transaction value, with a median of 0.27%. If you stopped reading there, you'd file the peg under paperwork.</p>
+<p>Two other findings change that picture. The direction tilts toward buyers. Of final outcomes, 51% were buyer claims, 38% were seller surpluses, and 11% had no adjustment. The tail is also fat. About 20% of final claims equaled or exceeded 1% of transaction value. On a $20M sale, 1% is $200,000 coming back out of your proceeds after you thought the deal was done.</p>
+<p>The money also sits out of reach for a while. In the first three quarters of 2025, 75% of deals with an adjustment clause set up a separate escrow for the adjustment, up from 69% in 2020. That cash is held by a third party for months after closing, and it's yours only once the true-up settles.</p>
+<h2>How the working capital peg gets set</h2>
+<p>The usual starting point is a trailing 12-month (TTM) average. You take NWC at each of the last 12 month-ends and average them. Buyers sometimes propose a 3- or 6-month window instead, especially for a fast-growing company, where last year's average can understate what the business needs today.</p>
+<p>Each method favors someone. A short window that ends in your busiest season sets a high peg. A TTM average smooths that out, but it can still cost you if you close in your slowest month.</p>
+<figure class="mp-wcpeg-seasonal" style="margin:0 0 1.5em"><style>.mp-wcpeg-seasonal .mp-m{display:none}@media (max-width:560px){.mp-wcpeg-seasonal .mp-d{display:none}.mp-wcpeg-seasonal .mp-m{display:block}}</style><div class="mp-d"><svg id="mp-wcpeg-seasonal-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-seasonal-light-t mp-wcpeg-seasonal-light-d"><title id="mp-wcpeg-seasonal-light-t">One January balance sheet, three pegs</title><desc id="mp-wcpeg-seasonal-light-d">Illustrative home services company closing in January with $1.0M of NWC. A $1.6M peg costs $600,000, a $1.3M TTM peg costs $300,000, a January-matched $1.05M peg costs $50,000.</desc><style>#mp-wcpeg-seasonal-light text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-seasonal-light .b{font-weight:800}#mp-wcpeg-seasonal-light .s{font-weight:600}#mp-wcpeg-seasonal-light .m{fill:var(--muted);font-weight:500}#mp-wcpeg-seasonal-light .w{fill:var(--inv-fg)}#mp-wcpeg-seasonal-light .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-seasonal-light .c{text-anchor:middle}#mp-wcpeg-seasonal-light .e{text-anchor:end}#mp-wcpeg-seasonal-light .tile{fill:var(--tile)}#mp-wcpeg-seasonal-light .dark{fill:var(--inv-bg)}#mp-wcpeg-seasonal-light .acc{fill:var(--accent)}#mp-wcpeg-seasonal-light .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-seasonal-light .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-seasonal-light .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-seasonal-light .f17{font-size:17px}#mp-wcpeg-seasonal-light .f16{font-size:16px}#mp-wcpeg-seasonal-light .f15{font-size:15px}#mp-wcpeg-seasonal-light .f14{font-size:14px}#mp-wcpeg-seasonal-light .f24{font-size:24px}</style><rect width="640" height="512" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">One January balance sheet, three pegs</tspan></text><text x="24" y="68" class="m f15"><tspan x="24" dy="0">Illustrative: $1.0M NWC in winter, $1.6M in summer</tspan></text><text x="536" y="94" class="m f14 c">You give back</text><text x="24" y="141" class="s f15">3 months to August · <tspan class="b">$1.6M</tspan></text><line x1="24" y1="150" x2="446" y2="150" stroke="var(--ink)" stroke-width="2"/><rect x="430" y="150" width="32" height="270" rx="8" class="acc"/><text x="446" y="138" class="b f16 c">$600,000</text><text x="24" y="276" class="s f15">TTM average · <tspan class="b">$1.3M</tspan></text><line x1="24" y1="285" x2="516" y2="285" stroke="var(--ink)" stroke-width="2"/><rect x="500" y="285" width="32" height="135" rx="8" class="acc"/><text x="516" y="273" class="b f16 c">$300,000</text><text x="24" y="389" class="s f15">Jan average, prior 2 yrs · <tspan class="b">$1.05M</tspan></text><line x1="24" y1="398" x2="586" y2="398" stroke="var(--ink)" stroke-width="2"/><rect x="570" y="398" width="32" height="22" rx="8" class="acc"/><text x="586" y="386" class="b f16 c">$50,000</text><line x1="24" y1="420" x2="616" y2="420" stroke="var(--accent)" stroke-width="3" stroke-dasharray="8 6"/><text x="24" y="444" class="s f15">Closing NWC in January · <tspan class="b">$1.0M</tspan></text><text x="24" y="484" class="m f15"><tspan x="24" dy="0">Same business, same balance sheet. The method alone moves $550,000.</tspan></text></svg></div><div class="mp-m"><svg id="mp-wcpeg-seasonal-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 492" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-seasonal-mobile-t mp-wcpeg-seasonal-mobile-d"><title id="mp-wcpeg-seasonal-mobile-t">One January balance sheet, three pegs</title><desc id="mp-wcpeg-seasonal-mobile-d">Illustrative home services company closing in January with $1.0M of NWC. A $1.6M peg costs $600,000, a $1.3M TTM peg costs $300,000, a January-matched $1.05M peg costs $50,000.</desc><style>#mp-wcpeg-seasonal-mobile text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-seasonal-mobile .b{font-weight:800}#mp-wcpeg-seasonal-mobile .s{font-weight:600}#mp-wcpeg-seasonal-mobile .m{fill:var(--muted);font-weight:500}#mp-wcpeg-seasonal-mobile .w{fill:var(--inv-fg)}#mp-wcpeg-seasonal-mobile .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-seasonal-mobile .c{text-anchor:middle}#mp-wcpeg-seasonal-mobile .e{text-anchor:end}#mp-wcpeg-seasonal-mobile .tile{fill:var(--tile)}#mp-wcpeg-seasonal-mobile .dark{fill:var(--inv-bg)}#mp-wcpeg-seasonal-mobile .acc{fill:var(--accent)}#mp-wcpeg-seasonal-mobile .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-seasonal-mobile .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-seasonal-mobile .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-seasonal-mobile .f17{font-size:17px}#mp-wcpeg-seasonal-mobile .f16{font-size:16px}#mp-wcpeg-seasonal-mobile .f15{font-size:15px}#mp-wcpeg-seasonal-mobile .f14{font-size:14px}#mp-wcpeg-seasonal-mobile .f24{font-size:24px}</style><rect width="400" height="492" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">One January balance sheet,</tspan><tspan x="24" dy="28">three pegs</tspan></text><text x="24" y="94" class="m f15"><tspan x="24" dy="0">Illustrative home services company.</tspan><tspan x="24" dy="20">Closing NWC in January: $1.0M</tspan></text><text x="24" y="150" class="s f16">3 months to August</text><text x="24" y="170" class="m f14">Peg $1.6M vs closing $1.0M</text><rect x="24" y="182" width="262" height="36" rx="18" class="acc"/><text x="296" y="207" class="b f17">$600,000</text><text x="24" y="250" class="s f16">TTM average</text><text x="24" y="270" class="m f14">Peg $1.3M vs closing $1.0M</text><rect x="24" y="282" width="131" height="36" rx="18" class="acc"/><text x="165" y="307" class="b f17">$300,000</text><text x="24" y="350" class="s f16">Jan average, prior 2 yrs</text><text x="24" y="370" class="m f14">Peg $1.05M vs closing $1.0M</text><rect x="24" y="382" width="28" height="36" rx="18" class="acc"/><text x="62" y="407" class="b f17">$50,000</text><text x="24" y="450" class="m f15"><tspan x="24" dy="0">Same business, same balance sheet. The</tspan><tspan x="24" dy="20">method alone moves $550,000.</tspan></text></svg></div></figure>
+<p>Take a home services company (the numbers here are illustrative, not from a real deal). Its NWC climbs to $1.6M in summer, when installation receivables pile up, and falls to $1.0M in winter. Its TTM average is $1.3M. The deal closes in January, with $1.0M of NWC on the balance sheet.</p>
+<table>
+<thead>
+<tr>
+<th>Peg method</th>
+<th>Peg</th>
+<th>Closing NWC</th>
+<th>You give back</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 months ending in August</td>
+<td>$1.6M</td>
+<td>$1.0M</td>
+<td>$600,000</td>
+</tr>
+<tr>
+<td>TTM average</td>
+<td>$1.3M</td>
+<td>$1.0M</td>
+<td>$300,000</td>
+</tr>
+<tr>
+<td>January average of the prior 2 years</td>
+<td>$1.05M</td>
+<td>$1.0M</td>
+<td>$50,000</td>
+</tr>
+</tbody>
+</table>
+<p>The business and its January balance sheet are identical in all three rows, so the method alone moves $550,000.</p>
+<p>Growth works the same way. If revenue climbed fast, receivables grew with it, and the buyer can fairly argue for a more recent window. Have that trend charted before the buyer raises it.</p>
+<h2>Where the number moves after you sign</h2>
+<p>Agreeing on a method settles only part of the peg. The definitions around it can still move what you pay.</p>
+<h3>The line-item definition</h3>
+<p>Which accounts count is a negotiation. A buyer can argue that receivables over 90 days or slow-moving inventory should come out of current assets. They can also argue that payroll accruals or deferred revenue are debt-like items you pay off at closing. Each reclassification moves money, and if the buyer drafts the definition after diligence, they draft it with their diligence findings in hand.</p>
+<h3>Accounting policies</h3>
+<p>A peg calculated under your historical accounting and a closing balance sheet measured under the buyer's post-diligence policies can disagree by a lot. A new bad-debt reserve or a bigger inventory write-down lowers your closing NWC while nothing in the business has changed. Ask for the closing balance sheet to follow the same policies used to set the peg, listed in a schedule. A <a href="https://embarcadvisors.com/seller-side-qofe-readiness-2026/" target="_blank" rel="noopener">sell-side quality of earnings review</a> earns its fee here, because it surfaces the reserve and accrual questions before a buyer's team does.</p>
+<h3>Who prepares the closing statement, and when</h3>
+<p>The buyer usually prepares the final statement. In the SRS data the median deadline was about 90 days after closing, and sellers generally got 30 days to review it. Buyers often run late, and 32% of proposed final calculations arrived after the contractual deadline. Some agreements make the buyer's numbers final if you don't object in time. You want your review clock to start when you have the full workpapers in hand.</p>
+<h3>The dispute clause</h3>
+<p>About 29% of deals with an adjustment clause dispute the buyer's first calculation, and SRS reports that disputed adjustments almost always end well for sellers. So keep a clean path to a dispute. Name the independent accountant, limit their review to the disputed items, and agree how their fees get split.</p>
+<h2>Working capital peg terms to settle in the LOI</h2>
+<figure class="mp-wcpeg-loi-terms" style="margin:0 0 1.5em"><style>.mp-wcpeg-loi-terms .mp-m{display:none}@media (max-width:560px){.mp-wcpeg-loi-terms .mp-d{display:none}.mp-wcpeg-loi-terms .mp-m{display:block}}</style><div class="mp-d"><svg id="mp-wcpeg-loi-terms-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-loi-terms-light-t mp-wcpeg-loi-terms-light-d"><title id="mp-wcpeg-loi-terms-light-t">7 working capital terms to settle in the LOI</title><desc id="mp-wcpeg-loi-terms-light-d">Checklist of seven terms: methodology, line items, accounting policies, a preliminary peg, timing, disputes and escrow. Settle all seven before you grant exclusivity.</desc><style>#mp-wcpeg-loi-terms-light text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-loi-terms-light .b{font-weight:800}#mp-wcpeg-loi-terms-light .s{font-weight:600}#mp-wcpeg-loi-terms-light .m{fill:var(--muted);font-weight:500}#mp-wcpeg-loi-terms-light .w{fill:var(--inv-fg)}#mp-wcpeg-loi-terms-light .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-loi-terms-light .c{text-anchor:middle}#mp-wcpeg-loi-terms-light .e{text-anchor:end}#mp-wcpeg-loi-terms-light .tile{fill:var(--tile)}#mp-wcpeg-loi-terms-light .dark{fill:var(--inv-bg)}#mp-wcpeg-loi-terms-light .acc{fill:var(--accent)}#mp-wcpeg-loi-terms-light .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-loi-terms-light .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-loi-terms-light .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-loi-terms-light .f17{font-size:17px}#mp-wcpeg-loi-terms-light .f16{font-size:16px}#mp-wcpeg-loi-terms-light .f15{font-size:15px}#mp-wcpeg-loi-terms-light .f14{font-size:14px}#mp-wcpeg-loi-terms-light .f24{font-size:24px}</style><rect width="640" height="540" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">7 working capital terms to settle in the LOI</tspan></text><rect x="24" y="64" width="290" height="104" rx="24" class="tile"/><circle cx="64" cy="116.0" r="20" class="acc"/><text x="64" y="122.0" class="b c f17">1</text><text x="100" y="102" class="b f17"><tspan x="100" dy="0">The methodology</tspan></text><text x="100" y="124" class="m f14"><tspan x="100" dy="0">TTM average, or seasonal</tspan><tspan x="100" dy="19">to match closing</tspan></text><rect x="24" y="180" width="290" height="104" rx="24" class="tile"/><circle cx="64" cy="232.0" r="20" class="acc"/><text x="64" y="238.0" class="b c f17">2</text><text x="100" y="218" class="b f17"><tspan x="100" dy="0">The line items</tspan></text><text x="100" y="240" class="m f14"><tspan x="100" dy="0">What's in and out, incl.</tspan><tspan x="100" dy="19">deferred revenue</tspan></text><rect x="24" y="296" width="290" height="104" rx="24" class="tile"/><circle cx="64" cy="348.0" r="20" class="acc"/><text x="64" y="354.0" class="b c f17">3</text><text x="100" y="334" class="b f17"><tspan x="100" dy="0">Accounting policies</tspan></text><text x="100" y="356" class="m f14"><tspan x="100" dy="0">Same policies at closing</tspan><tspan x="100" dy="19">as for the peg</tspan></text><rect x="24" y="412" width="290" height="104" rx="24" class="tile"/><circle cx="64" cy="464.0" r="20" class="acc"/><text x="64" y="470.0" class="b c f17">4</text><text x="100" y="450" class="b f17"><tspan x="100" dy="0">A preliminary peg</tspan></text><text x="100" y="472" class="m f14"><tspan x="100" dy="0">A number or range from</tspan><tspan x="100" dy="19">your own books</tspan></text><rect x="326" y="64" width="290" height="104" rx="24" class="tile"/><circle cx="366" cy="116.0" r="20" class="acc"/><text x="366" y="122.0" class="b c f17">5</text><text x="402" y="102" class="b f17"><tspan x="402" dy="0">Timing</tspan></text><text x="402" y="124" class="m f14"><tspan x="402" dy="0">Deadline, review window</tspan><tspan x="402" dy="19">and workpapers</tspan></text><rect x="326" y="180" width="290" height="104" rx="24" class="tile"/><circle cx="366" cy="232.0" r="20" class="acc"/><text x="366" y="238.0" class="b c f17">6</text><text x="402" y="218" class="b f17"><tspan x="402" dy="0">Disputes</tspan></text><text x="402" y="240" class="m f14"><tspan x="402" dy="0">Independent accountant,</tspan><tspan x="402" dy="19">disputed items</tspan></text><rect x="326" y="296" width="290" height="104" rx="24" class="tile"/><circle cx="366" cy="348.0" r="20" class="acc"/><text x="366" y="354.0" class="b c f17">7</text><text x="402" y="334" class="b f17"><tspan x="402" dy="0">Escrow</tspan></text><text x="402" y="356" class="m f14"><tspan x="402" dy="0">Its size, and who covers</tspan><tspan x="402" dy="19">any excess</tspan></text><rect x="326" y="412" width="290" height="104" rx="24" class="dark"/><text x="350" y="439" class="b w f17"><tspan x="350" dy="0">Settle all 7 before</tspan><tspan x="350" dy="22">exclusivity</tspan></text><text x="350" y="483" class="iv f14"><tspan x="350" dy="0">While a second buyer still</tspan><tspan x="350" dy="19">matters</tspan></text></svg></div><div class="mp-m"><svg id="mp-wcpeg-loi-terms-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 936" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-wcpeg-loi-terms-mobile-t mp-wcpeg-loi-terms-mobile-d"><title id="mp-wcpeg-loi-terms-mobile-t">7 working capital terms to settle in the LOI</title><desc id="mp-wcpeg-loi-terms-mobile-d">Checklist of seven terms: methodology, line items, accounting policies, a preliminary peg, timing, disputes and escrow. Settle all seven before you grant exclusivity.</desc><style>#mp-wcpeg-loi-terms-mobile text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}#mp-wcpeg-loi-terms-mobile .b{font-weight:800}#mp-wcpeg-loi-terms-mobile .s{font-weight:600}#mp-wcpeg-loi-terms-mobile .m{fill:var(--muted);font-weight:500}#mp-wcpeg-loi-terms-mobile .w{fill:var(--inv-fg)}#mp-wcpeg-loi-terms-mobile .iv{fill:var(--inv-muted);font-weight:500}#mp-wcpeg-loi-terms-mobile .c{text-anchor:middle}#mp-wcpeg-loi-terms-mobile .e{text-anchor:end}#mp-wcpeg-loi-terms-mobile .tile{fill:var(--tile)}#mp-wcpeg-loi-terms-mobile .dark{fill:var(--inv-bg)}#mp-wcpeg-loi-terms-mobile .acc{fill:var(--accent)}#mp-wcpeg-loi-terms-mobile .none{fill:var(--tile);stroke:var(--muted);stroke-width:1.5}#mp-wcpeg-loi-terms-mobile .f22{font-size:22px;letter-spacing:-.4px}#mp-wcpeg-loi-terms-mobile .f20{font-size:20px;letter-spacing:-.3px}#mp-wcpeg-loi-terms-mobile .f17{font-size:17px}#mp-wcpeg-loi-terms-mobile .f16{font-size:16px}#mp-wcpeg-loi-terms-mobile .f15{font-size:15px}#mp-wcpeg-loi-terms-mobile .f14{font-size:14px}#mp-wcpeg-loi-terms-mobile .f24{font-size:24px}</style><rect width="400" height="936" fill="var(--bg)"/><text x="24" y="40" class="b f22"><tspan x="24" dy="0">7 working capital terms to</tspan><tspan x="24" dy="28">settle in the LOI</tspan></text><rect x="24" y="92" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="138.0" r="20" class="acc"/><text x="64" y="144.0" class="b c f17">1</text><text x="100" y="124" class="b f17"><tspan x="100" dy="0">The methodology</tspan></text><text x="100" y="146" class="m f14"><tspan x="100" dy="0">TTM average, or seasonal to match</tspan><tspan x="100" dy="19">closing</tspan></text><rect x="24" y="196" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="242.0" r="20" class="acc"/><text x="64" y="248.0" class="b c f17">2</text><text x="100" y="228" class="b f17"><tspan x="100" dy="0">The line items</tspan></text><text x="100" y="250" class="m f14"><tspan x="100" dy="0">What's in and out, incl. deferred</tspan><tspan x="100" dy="19">revenue</tspan></text><rect x="24" y="300" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="346.0" r="20" class="acc"/><text x="64" y="352.0" class="b c f17">3</text><text x="100" y="332" class="b f17"><tspan x="100" dy="0">Accounting policies</tspan></text><text x="100" y="354" class="m f14"><tspan x="100" dy="0">Same policies at closing as for</tspan><tspan x="100" dy="19">the peg</tspan></text><rect x="24" y="404" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="450.0" r="20" class="acc"/><text x="64" y="456.0" class="b c f17">4</text><text x="100" y="436" class="b f17"><tspan x="100" dy="0">A preliminary peg</tspan></text><text x="100" y="458" class="m f14"><tspan x="100" dy="0">A number or range from your own</tspan><tspan x="100" dy="19">books</tspan></text><rect x="24" y="508" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="554.0" r="20" class="acc"/><text x="64" y="560.0" class="b c f17">5</text><text x="100" y="540" class="b f17"><tspan x="100" dy="0">Timing</tspan></text><text x="100" y="562" class="m f14"><tspan x="100" dy="0">Deadline, review window and</tspan><tspan x="100" dy="19">workpapers</tspan></text><rect x="24" y="612" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="658.0" r="20" class="acc"/><text x="64" y="664.0" class="b c f17">6</text><text x="100" y="644" class="b f17"><tspan x="100" dy="0">Disputes</tspan></text><text x="100" y="666" class="m f14"><tspan x="100" dy="0">Independent accountant, disputed</tspan><tspan x="100" dy="19">items</tspan></text><rect x="24" y="716" width="352" height="92" rx="24" class="tile"/><circle cx="64" cy="762.0" r="20" class="acc"/><text x="64" y="768.0" class="b c f17">7</text><text x="100" y="748" class="b f17"><tspan x="100" dy="0">Escrow</tspan></text><text x="100" y="770" class="m f14"><tspan x="100" dy="0">Its size, and who covers any</tspan><tspan x="100" dy="19">excess</tspan></text><rect x="24" y="820" width="352" height="92" rx="24" class="dark"/><text x="48" y="850" class="b w f17"><tspan x="48" dy="0">Settle all 7 before</tspan><tspan x="48" dy="22">exclusivity</tspan></text><text x="48" y="894" class="iv f14"><tspan x="48" dy="0">While a second buyer still matters</tspan></text></svg></div></figure>
+<p>In most deals the LOI isn't binding on price, but what it says becomes the starting point for the purchase agreement. Ask for these terms in writing before you grant exclusivity:</p>
+<ol>
+<li><strong>The methodology.</strong> Name it: a TTM monthly average, or a seasonal method that matches your closing month if your business swings.</li>
+<li><strong>The line items.</strong> List what's included and excluded, including how deferred revenue and payroll accruals are treated.</li>
+<li><strong>Accounting policies.</strong> The closing balance sheet follows the same policies used to calculate the peg.</li>
+<li><strong>A preliminary peg.</strong> A number, or at least a range, built from your own monthly balance sheets.</li>
+<li><strong>Timing.</strong> When the buyer delivers the closing statement, how long you have to review it, and access to the workpapers.</li>
+<li><strong>Disputes.</strong> An independent accountant, reviewing only the disputed items.</li>
+<li><strong>Escrow.</strong> Its size, and whether a shortfall comes out of that escrow only. In the SRS data the separate escrow covered a median of only a third of the final claim, so ask where the rest would come from.</li>
+</ol>
+<p>A buyer's team negotiates these terms on deal after deal, and you'll probably sell once. The LOI, while you still have other buyers, is the cheapest place to make up that difference in experience.</p>
+<h2>What to do before you go to market</h2>
+<p>Start with at least 12 months of monthly balance sheets that close on time and use consistent accounting. Without them, you can't calculate a credible TTM average, and the buyer's team will build the number for you. If you plan to argue for a seasonal method like the January average above, you'll need 24 months. If your close process isn't there yet, our guide to <a href="https://embarcadvisors.com/get-your-books-exit-ready/" target="_blank" rel="noopener">getting your books exit-ready</a> covers the cleanup.</p>
+<p>Then calculate your own peg under 2 or 3 methods, so you know which one a buyer's proposal favors before it arrives. With <a href="https://embarcadvisors.com/what-buyers-look-for-financials/" target="_blank" rel="noopener">the financials buyers look for</a> already in order, that's an afternoon's work for your controller, done before any buyer has exclusivity.</p>
+<p>If you're unsure whether your books would hold up, start with our post on <a href="https://embarcadvisors.com/is-your-business-ready-to-sell/" target="_blank" rel="noopener">how to know if your business is ready to sell</a>. When you're ready to sell, see how our <a href="https://embarcadvisors.com/sellside/" target="_blank" rel="noopener">sell-side M&amp;A advisory</a> works.</p>
+  </div>
+
+  <aside class="next">
+    <div class="tile">
+      <h2>Read the other post</h2>
+      <p><a href="13-week-cash-flow-forecast.html" style="font-size:21px;font-weight:600;letter-spacing:-.02em;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:4px">How to Build a 13-Week Cash Flow Forecast That Models Tariffs</a></p>
+      <div class="btns">
+        <a class="btn primary" href="../index.html#blog">All posts <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="mailto:martinpav19@gmail.com">Email Martin</a>
+      </div>
+    </div>
+  </aside>
+</article>
+</main>
+<footer class="wrap">© <span id="yr"></span> Martin Pavlovic · martinpproduction.com</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('mode');
+  var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>';
+  var MOON='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>';
+  function setTheme(t){
+    root.setAttribute('data-theme',t);
+    btn.querySelector('.lbl').textContent=t==='dark'?'Light mode':'Dark mode';
+    btn.querySelector('.ico').innerHTML=t==='dark'?SUN:MOON;
+    btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');
+    var mc=document.querySelector('meta[name="theme-color"]');if(mc)mc.setAttribute('content',t==='dark'?'#01120E':'#ffffff');
+  }
+  var saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
+  setTheme(saved==='dark'?'dark':'light');
+  btn.addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    setTheme(n);try{localStorage.setItem('theme',n)}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

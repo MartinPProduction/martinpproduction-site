@@ -55,7 +55,6 @@ section.wrap{margin-top:104px}
 .nav a,.nav button{white-space:nowrap;text-decoration:none;font:inherit;font-size:16px;font-weight:500;padding:9px 14px;border-radius:999px;color:var(--muted);transition:.25s;background:none;border:0;cursor:pointer}
 .nav a:hover,.nav button:hover{color:var(--ink)}
 .nav a.on{background:var(--accent);color:var(--on-accent)}
-.nav .mode{margin-left:4px;border:1px solid var(--line);color:var(--ink)}
 
 /* hero */
 .hero{padding-top:118px}
@@ -157,6 +156,23 @@ a.tile:hover .go{transform:rotate(-45deg);background:var(--ink);color:var(--bg);
 .cta .back{font-weight:600;text-decoration:none;font-size:17px;border-bottom:2px solid currentColor;align-self:flex-start}
 footer{padding:46px 0 56px;color:var(--muted);font-size:16px}
 
+
+/* theme button */
+.theme-btn{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;border:0;background:#008CFF;color:#01120E;font:700 18.7px/1 'Inter',system-ui,sans-serif;letter-spacing:-.01em;cursor:pointer;box-shadow:0 14px 34px -10px rgba(0,140,255,.65),0 2px 6px rgba(1,18,14,.2);transition:transform .25s,box-shadow .25s}
+.theme-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,140,255,.75),0 2px 6px rgba(1,18,14,.2)}
+.theme-btn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.theme-btn svg{width:22px;height:22px;flex:none}
+/* blog cards */
+.bpost{padding:14px 14px 30px}
+.bpost .cov{display:block;aspect-ratio:1200/630;overflow:hidden;border-radius:20px;border:1px solid var(--line);margin-bottom:24px;background:#fff}
+.bpost .cov img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.bpost:hover .cov img{transform:scale(1.04)}
+.bpost .txt{padding:0 14px;display:block}
+.bpost .i{display:block;font-size:16px;font-weight:600;opacity:.7}
+.bpost h3{font-size:clamp(26px,2.8vw,40px);margin:10px 0 14px;letter-spacing:-.035em}
+.bpost p{font-size:17px;color:var(--muted)}
+.bpost .open{display:inline-block;margin-top:18px;font-weight:600;font-size:16px;border-bottom:2px solid var(--accent)}
+
 /* viewers */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(1,18,14,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:none;place-items:center;padding:28px}
 .lightbox.open{display:grid}
@@ -181,14 +197,14 @@ footer{padding:46px 0 56px;color:var(--muted);font-size:16px}
   .stat.big{min-height:300px}
 }
 @media(max-width:640px){
+  .theme-btn{right:14px;bottom:14px;padding:13px 20px}
   section.wrap{margin-top:76px}
   .wrap{padding:0 16px}
   .bento{grid-template-columns:1fr}
   .bento>*{grid-column:auto!important}
   .tile{padding:24px;border-radius:24px}
   .post{min-height:0}
-  .nav .mode{display:none}
-  h1{font-size:23.6vw}
+    h1{font-size:23.6vw}
   .masonry,.mcol{gap:10px}
   .btn{padding:14px 20px}
   .portrait img{aspect-ratio:1/1;object-position:50% 12%}
@@ -207,14 +223,16 @@ footer{padding:46px 0 56px;color:var(--muted);font-size:16px}
   <a href="#results">Results</a>
   <a href="#about">About</a>
   <a href="#writing">Writing</a>
+  <a href="#blog">Blog</a>
   <a href="#cases">Case studies</a>
   <a href="#emails">Emails</a>
   <a href="#linkedin">LinkedIn</a>
   <a href="#design">Design</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
-  <button class="mode" id="mode" type="button" aria-label="Switch to dark mode">Dark</button>
 </nav>
+
+<button class="theme-btn" id="mode" type="button" aria-label="Switch to dark mode"><span class="ico" aria-hidden="true"></span><span class="lbl">Dark mode</span></button>
 
 <main>
   <header class="hero wrap" id="top">
@@ -315,6 +333,24 @@ footer{padding:46px 0 56px;color:var(--muted);font-size:16px}
       <a class="tile post s4 rv" href="https://www.funkymarketing.net/how-to-accelerate-sales-velocity/" target="_blank" rel="noopener">
         <div><span class="i">05</span><h3>B2B SaaS Revenue Growth: How to Accelerate Sales Velocity</h3><p class="muted">Sales velocity measures how fast pipeline turns into revenue. The article covers four levers: opportunity volume, deal size, win rate and sales cycle length.</p></div>
         <div class="foot"><span class="go" aria-hidden="true">→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="blog" class="wrap">
+    <div class="head">
+      <div class="label">Blog</div>
+      <h2 class="rv">Long-form, with diagrams</h2>
+      <p class="lede rv">Two posts on selling a business and on managing cash. Each includes diagrams.</p>
+    </div>
+    <div class="bento">
+      <a class="tile bpost s6 rv" href="blog/working-capital-peg.html">
+        <span class="cov"><img src="img/blog-working-capital-peg.webp" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+        <span class="txt"><span class="i">01 · M&amp;A, sell-side · 7 min read</span><h3>Negotiate Your Working Capital Peg at the LOI</h3><p>The price on your letter of intent assumes a normal level of working capital in the business on closing day. Who defines "normal," and when, decides how much of that price reaches your bank account.</p><span class="open">Read the post</span></span>
+      </a>
+      <a class="tile bpost s6 rv" href="blog/13-week-cash-flow-forecast.html">
+        <span class="cov"><img src="img/blog-13-week-cash-flow.webp" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+        <span class="txt"><span class="i">02 · Cash flow, FP&amp;A · 9 min read</span><h3>How to Build a 13-Week Cash Flow Forecast That Models Tariffs</h3><p>Tariffs and the September rate hike reach your bank balance weeks before they reach your margins. This post is a founder's build of the forecast that catches them.</p><span class="open">Read the post</span></span>
       </a>
     </div>
   </section>
@@ -484,9 +520,12 @@ const DESIGNS = [
 (function(){
   /* theme: light by default, dark on request (remembered per browser when storage is available) */
   const root = document.documentElement, modeBtn = document.getElementById('mode');
+  const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>';
+  const MOON='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>';
   function setTheme(t){
     root.setAttribute('data-theme', t);
-    modeBtn.textContent = t === 'dark' ? 'Light' : 'Dark';
+    modeBtn.querySelector('.lbl').textContent = t === 'dark' ? 'Light mode' : 'Dark mode';
+    modeBtn.querySelector('.ico').innerHTML = t === 'dark' ? SUN : MOON;
     modeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     const mc = document.querySelector('meta[name="theme-color"]'); if (mc) mc.setAttribute('content', t === 'dark' ? '#01120E' : '#ffffff');
   }
@@ -566,7 +605,7 @@ const DESIGNS = [
   const so=new IntersectionObserver(es=>es.forEach(e=>{
     if(e.isIntersecting){links.forEach(l=>l.classList.remove('on'));const a=map.get(e.target.id);if(a){a.classList.add('on');const n=a.parentElement;n.scrollTo({left:a.offsetLeft-n.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}}
   }),{rootMargin:'-45% 0px -50% 0px'});
-  ['top','results','about','writing','cases','emails','linkedin','design','skills','contact'].forEach(id=>{const s=document.getElementById(id);if(s)so.observe(s)});
+  ['top','results','about','writing','blog','cases','emails','linkedin','design','skills','contact'].forEach(id=>{const s=document.getElementById(id);if(s)so.observe(s)});
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();

@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Build a 13-Week Cash Flow Forecast That Models Tariffs · Martin Pavlovic</title>
+<meta name="description" content="Tariffs and the September rate hike reach your bank balance weeks before they reach your margins. This post is a founder&#x27;s build of the forecast that catches them.">
+<meta property="og:title" content="How to Build a 13-Week Cash Flow Forecast That Models Tariffs">
+<meta property="og:description" content="Tariffs and the September rate hike reach your bank balance weeks before they reach your margins. This post is a founder&#x27;s build of the forecast that catches them.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+<script>
+try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--tile:#F3F4F1;--line:#E3E6E0;--ink:#01120E;--muted:#4F5C57;
+  --accent:#008CFF;--on-accent:#01120E;
+  --inv-bg:#01120E;--inv-fg:#FFFFFF;--inv-muted:#B7C6BF;
+  --nav-bg:rgba(255,255,255,.82);--r:28px;
+}
+[data-theme="dark"]{
+  --bg:#01120E;--tile:#0C221C;--line:#183329;--ink:#F2F6F4;--muted:#A5BAB2;
+  --inv-bg:#F2F6F4;--inv-fg:#01120E;--inv-muted:#41504A;--nav-bg:rgba(1,18,14,.82);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.55;letter-spacing:-.006em;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s,color .35s}
+::selection{background:var(--accent);color:var(--on-accent)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+
+.top{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;max-width:calc(100vw - 24px);background:var(--nav-bg);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid var(--line)}
+.top a{white-space:nowrap;text-decoration:none;font-size:16px;font-weight:500;padding:9px 16px;border-radius:999px;color:var(--muted);transition:.25s}
+.top a:hover{color:var(--ink)}
+.top a.home{background:var(--accent);color:var(--on-accent)}
+
+.theme-btn{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;border:0;background:#008CFF;color:#01120E;font:700 18.7px/1 'Inter',system-ui,sans-serif;letter-spacing:-.01em;cursor:pointer;box-shadow:0 14px 34px -10px rgba(0,140,255,.65),0 2px 6px rgba(1,18,14,.2);transition:transform .25s,box-shadow .25s}
+.theme-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,140,255,.75),0 2px 6px rgba(1,18,14,.2)}
+.theme-btn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.theme-btn svg{width:22px;height:22px;flex:none}
+
+article{padding-top:120px}
+.head{max-width:960px;margin:0 auto}
+.label{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;color:var(--muted);margin-bottom:18px}
+.label::before{content:"";width:13px;height:13px;border-radius:4px;background:var(--accent)}
+h1{font-weight:800;letter-spacing:-.05em;line-height:.95;font-size:clamp(40px,7vw,92px)}
+.standfirst{font-size:clamp(19px,2vw,25px);line-height:1.4;color:var(--muted);margin-top:26px;letter-spacing:-.015em;max-width:44ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:16px;font-weight:600;color:var(--muted)}
+.meta span+span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-right:18px;vertical-align:middle}
+.cover{max-width:1100px;margin:44px auto 0}
+.cover img{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line);background:#fff}
+.cover figcaption{font-size:16px;color:var(--muted);margin-top:12px;max-width:960px}
+
+.prose{max-width:720px;margin:56px auto 0;font-size:19px;line-height:1.7}
+.prose>*+*{margin-top:1.15em}
+.prose h2{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-top:2.2em}
+.prose h3{font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-top:1.9em}
+.prose h2+*,.prose h3+*{margin-top:.8em}
+.prose a{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:3px;transition:background .2s}
+.prose a:hover{background:color-mix(in srgb,var(--accent) 22%,transparent)}
+.prose ul,.prose ol{padding-left:1.4em}
+.prose li+li{margin-top:.5em}
+.prose li::marker{color:var(--accent);font-weight:700}
+.prose blockquote{background:var(--tile);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:20px;padding:22px 26px;font-size:21px;line-height:1.45;font-weight:500;letter-spacing:-.015em}
+.prose blockquote p+p{margin-top:.6em}
+.prose strong{font-weight:700}
+.prose table{width:100%;border-collapse:separate;border-spacing:0;font-size:17px;line-height:1.45;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:block;overflow-x:auto}
+.prose th,.prose td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.prose th{background:var(--tile);font-weight:700}
+.prose tr:last-child td{border-bottom:0}
+.prose figure,.prose .chart{max-width:none}
+.prose figure{background:transparent}
+.prose svg{display:block;max-width:100%;height:auto}
+.prose figure{margin-left:-0px}
+.chart{margin-top:1.8em!important;margin-bottom:1.8em}
+.chart-in svg{width:100%;height:auto}
+@media(max-width:700px){
+  .chart{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:18px;padding:6px}
+  .chart::before{content:"Scroll sideways to see the full chart";display:block;font-size:16px;font-weight:600;color:var(--muted);padding:8px 10px 2px}
+  .chart-in{min-width:760px}
+}
+@media(min-width:1000px){
+  .prose figure,.prose .chart{margin-left:-80px;margin-right:-80px}
+}
+
+.next{max-width:960px;margin:88px auto 0}
+.tile{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:34px;display:flex;flex-direction:column;gap:22px}
+.tile h2{font-size:clamp(28px,3.6vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:1.5px solid transparent;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--inv-bg);color:var(--inv-fg)}
+.btn.ghost{border-color:currentColor}
+footer{padding:56px 0 110px;color:var(--muted);font-size:16px;text-align:center}
+@media(max-width:640px){
+  .wrap{padding:0 16px}
+  article{padding-top:104px}
+  .theme-btn{right:14px;bottom:14px;padding:13px 20px}
+  .tile{padding:24px;border-radius:24px}
+  .prose{font-size:18px}
+  .top a{padding:9px 12px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Site">
+  <a class="home" href="../index.html">Portfolio</a>
+  <a href="../index.html#blog">All posts</a>
+  <a href="../index.html#contact">Contact</a>
+</nav>
+
+<button class="theme-btn" id="mode" type="button" aria-label="Switch to dark mode"><span class="ico" aria-hidden="true"></span><span class="lbl">Dark mode</span></button>
+
+<main class="wrap">
+<article>
+  <header class="head">
+    <div class="label">Blog</div>
+    <h1>How to Build a 13-Week Cash Flow Forecast That Models Tariffs</h1>
+    <p class="standfirst">Tariffs and the September rate hike reach your bank balance weeks before they reach your margins. This post is a founder's build of the forecast that catches them.</p>
+    <div class="meta"><span>By Martin Pavlovic</span><span>Cash flow, FP&A</span><span>9 min read</span></div>
+  </header>
+  <figure class="cover"><img src="../img/blog-13-week-cash-flow.webp" alt="13-week cash flow forecast with one week dipping below the cash floor after a tariff invoice" width="1200" height="630"></figure>
+  <div class="prose">
+<p>Your 13-week cash flow forecast probably assumes your costs held still in 2026, and two of them didn't. Tariff rates kept shifting between the day you issued a purchase order and the day the goods cleared customs. And on September 16, 2026, the Federal Reserve raised its target range for <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm" target="_blank" rel="noopener">the first time since July 2023</a>, to 3.75% to 4%.</p>
+<p>If your forecast still carries spring's landed costs and spring's interest line, your lowest cash week sits lower than the spreadsheet shows. Many small businesses can't absorb that kind of surprise for long. The JPMorgan Chase Institute found that the median small business held 27 days of cash outflows in reserve, and a quarter held fewer than 13. (The study used 2015 bank data, and it's still the most-cited baseline.)</p>
+<p>The median is under 4 weeks of cash, which is why the 13-week view matters. You can fix it by adding a few lines to the forecast you already have. You need duty-adjusted landed cost on the dates you actually pay, a floating rate on any variable debt, and a downside case built around a specific tariff or rate move. It's the same cash forecast a buyer-ready finance function runs, and it's where <a href="https://embarcadvisors.com/fpa-and-cfo-advisory/" target="_blank" rel="noopener">our FP&amp;A and CFO advisory work</a> starts before stretching the view past a year. Below is the build step by step, with a worked tariff example and the triggers that tell you when to act.</p>
+<h2>Why your margins and your cash disagree</h2>
+<div class="chart"><div class="chart-in"><svg id="mp-13wk-margin-cash-vars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="100%"  preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-13wk-margin-cash-vars-t mp-13wk-margin-cash-vars-d">
+<title id="mp-13wk-margin-cash-vars-t">Reported margin vs. weekly cash</title>
+<desc id="mp-13wk-margin-cash-vars-d">Illustrative line chart over 13 weeks. Reported gross margin under FIFO stays flat while weekly ending cash steps down each time a duty is paid, in weeks 4, 7 and 10.</desc>
+<style>
+#mp-13wk-margin-cash-vars text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink,#01120E);font-size:15px}
+#mp-13wk-margin-cash-vars .m{text-anchor:middle}
+#mp-13wk-margin-cash-vars .e{text-anchor:end}
+#mp-13wk-margin-cash-vars .b{font-weight:700}
+#mp-13wk-margin-cash-vars .hd{font-size:30px;font-weight:800;letter-spacing:-1.2px}
+#mp-13wk-margin-cash-vars .ey{font-size:13px;font-weight:600;letter-spacing:1.2px;fill:var(--muted,#4F5C57)}
+#mp-13wk-margin-cash-vars .mu{fill:var(--muted,#4F5C57);font-size:13px}
+#mp-13wk-margin-cash-vars .s14{font-size:14px}
+#mp-13wk-margin-cash-vars .s18{font-size:18px}
+#mp-13wk-margin-cash-vars .big{font-size:26px;font-weight:800;letter-spacing:-.8px}
+#mp-13wk-margin-cash-vars .oa{fill:var(--on-accent,#01120E);font-weight:700;font-size:14px}
+#mp-13wk-margin-cash-vars .tile{fill:var(--tile,#F3F4F1);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-margin-cash-vars .card{fill:var(--bg,#FFFFFF);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-margin-cash-vars .gr{stroke:var(--line,#E3E6E0);stroke-width:1.5;fill:none}
+#mp-13wk-margin-cash-vars .ax{stroke:var(--muted,#4F5C57);stroke-width:1.5;fill:none}
+#mp-13wk-margin-cash-vars .fl{stroke:var(--muted,#4F5C57);stroke-width:2;stroke-dasharray:8 6;fill:none}
+#mp-13wk-margin-cash-vars .li{stroke:var(--ink,#01120E);stroke-width:3.5;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-margin-cash-vars .ld{stroke:var(--ink,#01120E);stroke-width:3;fill:none;stroke-dasharray:3 7;stroke-linecap:round}
+#mp-13wk-margin-cash-vars .la{stroke:var(--accent,#008CFF);stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-margin-cash-vars .fi{fill:var(--ink,#01120E)}
+#mp-13wk-margin-cash-vars .fa{fill:var(--accent,#008CFF)}
+#mp-13wk-margin-cash-vars .fm{fill:var(--muted,#4F5C57)}
+#mp-13wk-margin-cash-vars .pill{fill:var(--accent,#008CFF)}
+</style>
+<rect class="tile" x="0.5" y="0.5" width="999" height="559" rx="28"/>
+<text class="ey" x="40" y="52">ILLUSTRATIVE</text><text class="hd" x="40" y="92">Reported margin vs. weekly cash</text>
+<line class="gr" x1="100" y1="190" x2="930" y2="190"/>
+<line class="gr" x1="100" y1="260" x2="930" y2="260"/>
+<line class="gr" x1="100" y1="330" x2="930" y2="330"/>
+<line class="gr" x1="100" y1="400" x2="930" y2="400"/>
+<line class="ax" x1="100" y1="450" x2="930" y2="450"/><text class="m s14 mu" x="100.0" y="476">W1</text><text class="m s14 mu" x="169.2" y="476">W2</text><text class="m s14 mu" x="238.3" y="476">W3</text><text class="m s14 mu" x="307.5" y="476">W4</text><text class="m s14 mu" x="376.7" y="476">W5</text><text class="m s14 mu" x="445.8" y="476">W6</text><text class="m s14 mu" x="515.0" y="476">W7</text><text class="m s14 mu" x="584.2" y="476">W8</text><text class="m s14 mu" x="653.3" y="476">W9</text><text class="m s14 mu" x="722.5" y="476">W10</text><text class="m s14 mu" x="791.7" y="476">W11</text><text class="m s14 mu" x="860.8" y="476">W12</text><text class="m s14 mu" x="930.0" y="476">W13</text>
+<path class="la" d="M100.0,200.0 L169.2,200.0 L238.3,200.0 L307.5,200.0 L376.7,200.0 L445.8,200.0 L515.0,200.0 L584.2,200.0 L653.3,200.0 L722.5,200.0 L791.7,200.0 L860.8,200.0 L930.0,200.0"/><path class="li" d="M100.0,240.0 L169.2,245.0 L238.3,242.0 L307.5,292.0 L376.7,296.0 L445.8,292.0 L515.0,342.0 L584.2,346.0 L653.3,342.0 L722.5,392.0 L791.7,396.0 L860.8,393.0 L930.0,398.0"/>
+<circle class="fa" cx="307.5" cy="292" r="7"/>
+<rect class="pill" x="259.8" y="244" width="103.4" height="28" rx="14"/><text class="oa m" x="311.5" y="263">Duty paid</text>
+<circle class="fa" cx="515.0" cy="342" r="7"/>
+<rect class="pill" x="467.3" y="294" width="103.4" height="28" rx="14"/><text class="oa m" x="519.0" y="313">Duty paid</text>
+<circle class="fa" cx="722.5" cy="392" r="7"/>
+<rect class="pill" x="674.8" y="344" width="103.4" height="28" rx="14"/><text class="oa m" x="726.5" y="363">Duty paid</text>
+<line class="la" x1="560" y1="134" x2="596" y2="134"/><text class="s14" x="606" y="139">Reported gross margin (FIFO)</text>
+<line class="li" x1="560" y1="160" x2="596" y2="160"/><text class="s14" x="606" y="165">Weekly ending cash</text>
+<text class="mu" x="40" y="516">Not to scale. Under FIFO, cost of goods sold lags the landed cost you pay today,</text>
+<text class="mu" x="40" y="534">so reported margin holds while cash falls.</text>
+</svg>
+</div></div>
+
+<p>Profit and cash run on different clocks. A growing business can be profitable and still run short, because slow collections, inventory buildup, up-front project costs and rising debt service all pull cash out before any of it shows on the income statement. Your monthly P&amp;L (profit and loss statement) averages those timing gaps away, so a business that's profitable for the month can still come up short on the one Friday payroll clears.</p>
+<p>Tariffs widen that gap, starting with timing. Duty is generally charged at the rate in effect when your goods are entered at customs, which may differ from the rate on the day you placed the order. So a landed cost you approved at the purchase order stage may not match the invoice you end up paying. Landed cost is everything it takes to get product onto your shelf: the price, shipping, insurance, customs duties, taxes and handling fees. The duty line is the one that moves, and duties can stack (a base tariff, Section 301 surcharges, anti-dumping duties and countervailing duties can all land on the same shipment).</p>
+<p>Accounting then hides the damage. If you value inventory on FIFO (first in, first out), your cost of goods sold lags the landed cost you're paying today. Your margins can look healthy for a quarter while the higher duties have already left your bank account, and they compress later, when the expensive inventory finally flows through. Ted Curd, CFO of Centime, put the result plainly in <a href="https://www.centime.com/articles/how-tariff-changes-in-2026-are-affecting-ap-and-inventory-management" target="_blank" rel="noopener">a piece on tariffs and AP</a> in April 2026:</p>
+<blockquote>
+<p>"And your 13 week cash forecast is wrong because nobody modeled the tariff increase that hit three weeks ago."</p>
+</blockquote>
+<p>A budget won't catch this either. It sets expectations for the year, and it can't tell you which week cash gets tight or how long you have to respond. That's the job of a <a href="https://embarcadvisors.com/why-your-budget-is-useless-without-a-credible-forecast/" target="_blank" rel="noopener">credible forecast behind the budget</a>, and for cash, the most useful forecast is the 13-week one.</p>
+<h2>What a 13-week cash flow forecast is</h2>
+<p>A 13-week cash flow forecast projects your cash receipts and cash payments week by week for one quarter, or 91 days. It uses the direct method, which means it tracks actual money in and money out instead of starting from net income and adjusting backward. The goal is enough visibility to spot pressure while you still have time to do something about it, and rough numbers on the right dates get you there.</p>
+<p>The horizon matters because of how thin most cash cushions are. The <a href="https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/report-cash-flows-balances-and-buffer-days" target="_blank" rel="noopener">JPMorgan Chase Institute's study</a> behind those figures covered 597,000 small businesses. It measured "cash buffer days," the number of days a business could keep paying its bills from its balance if every inflow stopped. Work out your own buffer days and compare them with the 27-day median. A 13-week window covers more than 3 times that median cushion, which is roughly the distance you need to see a problem coming and still have options.</p>
+<h2>How to build a 13-week cash flow forecast, step by step</h2>
+<div class="chart"><div class="chart-in"><svg id="mp-13wk-template-vars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 810" width="100%"  preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-13wk-template-vars-t mp-13wk-template-vars-d">
+<title id="mp-13wk-template-vars-t">The 13-week grid, with tariff and rate lines</title>
+<desc id="mp-13wk-template-vars-d">13-week cash flow template. Rows run from opening cash and customer receipts through payroll, vendors, a landed-cost true-up, duties and broker fees, debt service, rent and taxes, capex and distributions, to ending cash, a cash floor and a watchouts row. The two tariff rows and the debt service row are highlighted, and week 6 is marked as the low week.</desc>
+<style>
+#mp-13wk-template-vars text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink,#01120E);font-size:15px}
+#mp-13wk-template-vars .m{text-anchor:middle}
+#mp-13wk-template-vars .e{text-anchor:end}
+#mp-13wk-template-vars .b{font-weight:700}
+#mp-13wk-template-vars .hd{font-size:30px;font-weight:800;letter-spacing:-1.2px}
+#mp-13wk-template-vars .ey{font-size:13px;font-weight:600;letter-spacing:1.2px;fill:var(--muted,#4F5C57)}
+#mp-13wk-template-vars .mu{fill:var(--muted,#4F5C57);font-size:13px}
+#mp-13wk-template-vars .s14{font-size:14px}
+#mp-13wk-template-vars .s18{font-size:18px}
+#mp-13wk-template-vars .big{font-size:26px;font-weight:800;letter-spacing:-.8px}
+#mp-13wk-template-vars .oa{fill:var(--on-accent,#01120E);font-weight:700;font-size:14px}
+#mp-13wk-template-vars .tile{fill:var(--tile,#F3F4F1);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-template-vars .card{fill:var(--bg,#FFFFFF);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-template-vars .gr{stroke:var(--line,#E3E6E0);stroke-width:1.5;fill:none}
+#mp-13wk-template-vars .ax{stroke:var(--muted,#4F5C57);stroke-width:1.5;fill:none}
+#mp-13wk-template-vars .fl{stroke:var(--muted,#4F5C57);stroke-width:2;stroke-dasharray:8 6;fill:none}
+#mp-13wk-template-vars .li{stroke:var(--ink,#01120E);stroke-width:3.5;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-template-vars .ld{stroke:var(--ink,#01120E);stroke-width:3;fill:none;stroke-dasharray:3 7;stroke-linecap:round}
+#mp-13wk-template-vars .la{stroke:var(--accent,#008CFF);stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-template-vars .fi{fill:var(--ink,#01120E)}
+#mp-13wk-template-vars .fa{fill:var(--accent,#008CFF)}
+#mp-13wk-template-vars .fm{fill:var(--muted,#4F5C57)}
+#mp-13wk-template-vars .pill{fill:var(--accent,#008CFF)}
+</style>
+<rect class="tile" x="0.5" y="0.5" width="999" height="809" rx="28"/>
+<text class="ey" x="40" y="52">TEMPLATE</text><text class="hd" x="40" y="92">The 13-week grid, with tariff and rate lines</text>
+<text class="m b s14" x="409.0" y="142">W1</text>
+<text class="m b s14" x="483.0" y="142">W2</text>
+<text class="m b s14" x="557.0" y="142">W3</text>
+<text class="m b s14" x="631.0" y="142">W4</text>
+<text class="m b s14" x="705.0" y="142">W5</text>
+<text class="m b s14" x="779.0" y="142">W6</text>
+<text class="m b s14" x="853.0" y="142">...</text>
+<text class="m b s14" x="927.0" y="142">W13</text>
+<text class="ey" x="40" y="178">STARTING POINT</text>
+<rect class="card" x="40" y="188" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="210">Opening cash (bank balance)</text>
+<rect class="card" x="376" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="188" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="188" width="66" height="34" rx="10"/>
+<text class="ey" x="40" y="252">RECEIPTS</text>
+<rect class="card" x="40" y="262" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="284">Customer receipts (actual pay dates)</text>
+<rect class="card" x="376" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="262" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="262" width="66" height="34" rx="10"/>
+<text class="ey" x="40" y="326">DISBURSEMENTS</text>
+<rect class="card" x="40" y="336" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="358">Payroll, payroll taxes and benefits</text>
+<rect class="card" x="376" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="336" width="66" height="34" rx="10"/>
+<rect class="card" x="40" y="378" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="400">Vendors and subcontractors</text>
+<rect class="card" x="376" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="378" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="378" width="66" height="34" rx="10"/>
+<rect class="pill" x="40" y="420" width="324" height="34" rx="17"/>
+<text class="oa" x="58" y="442">Landed-cost true-up</text>
+<text class="oa e" x="348" y="442" style="font-size:11px;letter-spacing:1px">TARIFF</text>
+<rect class="card" x="376" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="420" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="420" width="66" height="34" rx="10"/>
+<rect class="pill" x="40" y="462" width="324" height="34" rx="17"/>
+<text class="oa" x="58" y="484">Duties and broker fees</text>
+<text class="oa e" x="348" y="484" style="font-size:11px;letter-spacing:1px">TARIFF</text>
+<rect class="card" x="376" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="462" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="462" width="66" height="34" rx="10"/>
+<rect class="pill" x="40" y="504" width="324" height="34" rx="17"/>
+<text class="oa" x="58" y="526">Debt service (principal and interest)</text>
+<text class="oa e" x="348" y="526" style="font-size:11px;letter-spacing:1px">RATE</text>
+<rect class="card" x="376" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="504" width="66" height="34" rx="10"/>
+<rect class="card" x="40" y="546" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="568">Rent, insurance and taxes</text>
+<rect class="card" x="376" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="546" width="66" height="34" rx="10"/>
+<rect class="card" x="40" y="588" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="610">Capex and owner distributions</text>
+<rect class="card" x="376" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="588" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="588" width="66" height="34" rx="10"/>
+<text class="ey" x="40" y="652">POSITION</text>
+<rect class="card" x="40" y="662" width="324" height="34" rx="17"/>
+<text class="s14 b" x="58" y="684">Ending cash</text>
+<rect class="card" x="376" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="662" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="662" width="66" height="34" rx="10"/>
+<rect class="pill" x="746" y="662" width="66" height="34" rx="10"/><text class="oa m" x="779.0" y="684" style="font-size:13px">Low</text>
+<rect class="card" x="40" y="704" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="726">Cash floor</text>
+<line class="fl" x1="382" y1="721" x2="436" y2="721"/>
+<line class="fl" x1="456" y1="721" x2="510" y2="721"/>
+<line class="fl" x1="530" y1="721" x2="584" y2="721"/>
+<line class="fl" x1="604" y1="721" x2="658" y2="721"/>
+<line class="fl" x1="678" y1="721" x2="732" y2="721"/>
+<line class="fl" x1="752" y1="721" x2="806" y2="721"/>
+<line class="fl" x1="826" y1="721" x2="880" y2="721"/>
+<line class="fl" x1="900" y1="721" x2="954" y2="721"/>
+<rect class="card" x="40" y="746" width="324" height="34" rx="17"/>
+<text class="s14" x="58" y="768">Watchouts (least certain assumption)</text>
+<rect class="card" x="376" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="450" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="524" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="598" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="672" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="746" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="820" y="746" width="66" height="34" rx="10"/>
+<rect class="card" x="894" y="746" width="66" height="34" rx="10"/>
+</svg>
+</div></div>
+
+<h3>Step 1: Start with the cash in the bank</h3>
+<p>Open with today's available cash across every operating account, net of checks you've written that haven't cleared. Skip accounting income here. The bank balance is the money you can actually spend this week.</p>
+<h3>Step 2: Lay out 13 weekly columns on the real calendar</h3>
+<p>Tie each column to an actual week. That way a month with an extra payroll run, or a quarter-end tax payment, shows up in the week it hits instead of getting smoothed into a monthly average.</p>
+<h3>Step 3: Forecast receipts by when customers really pay</h3>
+<p>Base them on each customer's payment history from your accounts receivable aging, which is often slower than the terms on the invoice. If a customer on net 30 has paid in 52 days for a year, the forecast should say 52.</p>
+<h3>Step 4: Put every disbursement on its real date</h3>
+<p>Payroll, payroll taxes and benefits all go in the week the money leaves. So do vendor and subcontractor payments, rent, insurance, taxes, capital spending and owner distributions. Approved vendor invoices should drop into the forecast on their scheduled payment dates.</p>
+<h3>Step 5: Give debt service its own line</h3>
+<p>Keep principal and interest on a separate row. You'll want to see it, and so will any lender reading the forecast. It's also where the September rate change shows up.</p>
+<h3>Step 6: Find your lowest week and set a cash floor</h3>
+<p>Calculate an ending balance for every week, pick a minimum cash floor, and mark any week that falls below it. The lowest week is the number that matters. The closing balance in week 13 can look fine while week 6 bounces payroll.</p>
+<p>Add a "watchouts" column too, naming the least certain assumption in each week, so the soft numbers stay visible.</p>
+<h2>Add the tariff lines</h2>
+<div class="chart"><div class="chart-in"><svg id="mp-13wk-landed-cost-vars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="100%"  preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-13wk-landed-cost-vars-t mp-13wk-landed-cost-vars-d">
+<title id="mp-13wk-landed-cost-vars-t">One order, one tariff change</title>
+<desc id="mp-13wk-landed-cost-vars-d">Bar chart of one purchase order: a $42,000 purchase order price, a $51,200 estimated landed cost and a $55,800 final invoice after a mid-shipment tariff increase, $4,600 or about 9% over the estimate. Source: Centime.</desc>
+<style>
+#mp-13wk-landed-cost-vars text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink,#01120E);font-size:15px}
+#mp-13wk-landed-cost-vars .m{text-anchor:middle}
+#mp-13wk-landed-cost-vars .e{text-anchor:end}
+#mp-13wk-landed-cost-vars .b{font-weight:700}
+#mp-13wk-landed-cost-vars .hd{font-size:30px;font-weight:800;letter-spacing:-1.2px}
+#mp-13wk-landed-cost-vars .ey{font-size:13px;font-weight:600;letter-spacing:1.2px;fill:var(--muted,#4F5C57)}
+#mp-13wk-landed-cost-vars .mu{fill:var(--muted,#4F5C57);font-size:13px}
+#mp-13wk-landed-cost-vars .s14{font-size:14px}
+#mp-13wk-landed-cost-vars .s18{font-size:18px}
+#mp-13wk-landed-cost-vars .big{font-size:26px;font-weight:800;letter-spacing:-.8px}
+#mp-13wk-landed-cost-vars .oa{fill:var(--on-accent,#01120E);font-weight:700;font-size:14px}
+#mp-13wk-landed-cost-vars .tile{fill:var(--tile,#F3F4F1);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-landed-cost-vars .card{fill:var(--bg,#FFFFFF);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-landed-cost-vars .gr{stroke:var(--line,#E3E6E0);stroke-width:1.5;fill:none}
+#mp-13wk-landed-cost-vars .ax{stroke:var(--muted,#4F5C57);stroke-width:1.5;fill:none}
+#mp-13wk-landed-cost-vars .fl{stroke:var(--muted,#4F5C57);stroke-width:2;stroke-dasharray:8 6;fill:none}
+#mp-13wk-landed-cost-vars .li{stroke:var(--ink,#01120E);stroke-width:3.5;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-landed-cost-vars .ld{stroke:var(--ink,#01120E);stroke-width:3;fill:none;stroke-dasharray:3 7;stroke-linecap:round}
+#mp-13wk-landed-cost-vars .la{stroke:var(--accent,#008CFF);stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-landed-cost-vars .fi{fill:var(--ink,#01120E)}
+#mp-13wk-landed-cost-vars .fa{fill:var(--accent,#008CFF)}
+#mp-13wk-landed-cost-vars .fm{fill:var(--muted,#4F5C57)}
+#mp-13wk-landed-cost-vars .pill{fill:var(--accent,#008CFF)}
+</style>
+<rect class="tile" x="0.5" y="0.5" width="999" height="579" rx="28"/>
+<text class="ey" x="40" y="52">ONE PURCHASE ORDER</text><text class="hd" x="40" y="92">One order, one tariff change</text>
+<line class="ax" x1="80" y1="450" x2="920" y2="450"/>
+<path class="fi" d="M115.0,450 V275.8 a14,14 0 0 1 14,-14 H271.0 a14,14 0 0 1 14,14 V450 Z"/>
+<text class="m big" x="200" y="245.8">$42,000</text>
+<text class="m s18" x="200" y="482">Purchase order price</text>
+<path class="fm" d="M385.0,450 V234.6 a14,14 0 0 1 14,-14 H541.0 a14,14 0 0 1 14,14 V450 Z"/>
+<text class="m big" x="470" y="204.6">$51,200</text>
+<text class="m s18" x="470" y="482">Estimated landed cost</text>
+<rect class="fi" x="655.0" y="220.6" width="170" height="229.4" rx="0"/>
+<path class="fa" d="M655.0,220.6 V214.0 a14,14 0 0 1 14,-14 H811.0 a14,14 0 0 1 14,14 V220.6 Z"/>
+<text class="m big" x="740" y="184.0">$55,800</text>
+<text class="m s18" x="740" y="482">Final invoice</text>
+<line class="la" x1="829.0" y1="210.3" x2="845.0" y2="210.3" style="stroke-width:2.5"/>
+<rect class="pill" x="845.0" y="196.30465949820788" width="124.0" height="28" rx="14"/><text class="oa m" x="907.0" y="215.30465949820788">+$4,600 (9%)</text>
+<rect class="fa" x="580" y="76" width="16" height="16" rx="4"/><text class="s14" x="604" y="89">Added by a tariff increase mid-shipment</text>
+<text class="mu" x="40" y="534">Source: Centime, "How Tariff Changes in 2026 Are Affecting AP and Inventory Management" (April 2026).</text>
+<text class="mu" x="40" y="552">The +$4,600 and 9% are calculated from Centime's figures.</text>
+</svg>
+</div></div>
+
+<p>Three changes turn a standard 13-week forecast into one that holds up under tariffs.</p>
+<p><strong>Recalculate landed cost when goods arrive.</strong> Re-run landed cost at goods receipt using the duty rates that actually applied, and push the difference into the week you'll pay it. Centime walks through an example: a $42,000 purchase order carried an estimated landed cost of $51,200. A tariff increase hit mid-shipment, and the invoice came in at $55,800. That's $4,600 more than planned, about 9% over the estimate, on a single order. Multiply that across every open PO and you can see how fast the lowest week moves.</p>
+<p><strong>Forecast duties and broker fees as their own lines.</strong> These charges often arrive separately, with no matching line on the purchase order. If your forecast only knows about vendor invoices, it will miss them. Give them their own rows and date them on the clearance schedule.</p>
+<p><strong>Size the exposure by category.</strong> Centime's estimate is that a 10% tariff increase on a key material category can move weekly cash needs by tens of thousands of dollars. Your figure depends on your import mix, so build it from your own top categories: what you import, from where, and what each shipment cost in duty last time.</p>
+<p>If your inventory runs on standard cost, expect your purchase price variance reports to get noisy while tariffs keep moving. That's one more reason to read the cash forecast alongside the P&amp;L instead of trusting margins alone. (Which inventory method suits your business is a question for your accountant.)</p>
+<h2>Add the rate line</h2>
+<p>The Fed held its target range at 3.5% to 3.75% at every meeting from January through July 2026, which made it easy to treat interest as a fixed cost. Then on September 16, 2026, it <a href="https://federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" target="_blank" rel="noopener">raised the range a quarter point</a> to 3.75% to 4%. At the <a href="https://federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">October 28 meeting it held there</a>, but 2 voters dissented because they wanted another quarter point. We covered what the hike means for <a href="https://embarcadvisors.com/the-fed-just-raised-rates-heres-what-it-means-if-you-want-to-sell-in-2027/" target="_blank" rel="noopener">selling your business in 2027</a>; for your cash forecast, the question is narrower.</p>
+<p>If you carry a line of credit or term loan that floats, your interest payment changed in September. Update the debt service row to the current rate, then put a further quarter point in the downside case. For many owner-led businesses the dollar amount is modest (a quarter point on $1M of floating debt is $2,500 a year). The bigger risk usually sits in the covenants and the borrowing base, because a higher interest bill eats the headroom you have on a coverage ratio. Watch that headroom as a line of its own.</p>
+<h2>Build three scenarios around specific events</h2>
+<div class="chart"><div class="chart-in"><svg id="mp-13wk-scenarios-vars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="100%"  preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mp-13wk-scenarios-vars-t mp-13wk-scenarios-vars-d">
+<title id="mp-13wk-scenarios-vars-t">Three scenarios against a cash floor</title>
+<desc id="mp-13wk-scenarios-vars-d">Illustrative chart of three 13-week cash scenarios. The base case stays above the cash floor. The dotted downside case falls below the floor from week 6. After a trigger in week 4, the action case dips but stays above the floor.</desc>
+<style>
+#mp-13wk-scenarios-vars text{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink,#01120E);font-size:15px}
+#mp-13wk-scenarios-vars .m{text-anchor:middle}
+#mp-13wk-scenarios-vars .e{text-anchor:end}
+#mp-13wk-scenarios-vars .b{font-weight:700}
+#mp-13wk-scenarios-vars .hd{font-size:30px;font-weight:800;letter-spacing:-1.2px}
+#mp-13wk-scenarios-vars .ey{font-size:13px;font-weight:600;letter-spacing:1.2px;fill:var(--muted,#4F5C57)}
+#mp-13wk-scenarios-vars .mu{fill:var(--muted,#4F5C57);font-size:13px}
+#mp-13wk-scenarios-vars .s14{font-size:14px}
+#mp-13wk-scenarios-vars .s18{font-size:18px}
+#mp-13wk-scenarios-vars .big{font-size:26px;font-weight:800;letter-spacing:-.8px}
+#mp-13wk-scenarios-vars .oa{fill:var(--on-accent,#01120E);font-weight:700;font-size:14px}
+#mp-13wk-scenarios-vars .tile{fill:var(--tile,#F3F4F1);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-scenarios-vars .card{fill:var(--bg,#FFFFFF);stroke:var(--line,#E3E6E0);stroke-width:1}
+#mp-13wk-scenarios-vars .gr{stroke:var(--line,#E3E6E0);stroke-width:1.5;fill:none}
+#mp-13wk-scenarios-vars .ax{stroke:var(--muted,#4F5C57);stroke-width:1.5;fill:none}
+#mp-13wk-scenarios-vars .fl{stroke:var(--muted,#4F5C57);stroke-width:2;stroke-dasharray:8 6;fill:none}
+#mp-13wk-scenarios-vars .li{stroke:var(--ink,#01120E);stroke-width:3.5;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-scenarios-vars .ld{stroke:var(--ink,#01120E);stroke-width:3;fill:none;stroke-dasharray:3 7;stroke-linecap:round}
+#mp-13wk-scenarios-vars .la{stroke:var(--accent,#008CFF);stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+#mp-13wk-scenarios-vars .fi{fill:var(--ink,#01120E)}
+#mp-13wk-scenarios-vars .fa{fill:var(--accent,#008CFF)}
+#mp-13wk-scenarios-vars .fm{fill:var(--muted,#4F5C57)}
+#mp-13wk-scenarios-vars .pill{fill:var(--accent,#008CFF)}
+</style>
+<rect class="tile" x="0.5" y="0.5" width="999" height="559" rx="28"/>
+<text class="ey" x="40" y="52">ILLUSTRATIVE</text><text class="hd" x="40" y="92">Three scenarios against a cash floor</text>
+<line class="gr" x1="100" y1="180" x2="800" y2="180"/>
+<line class="gr" x1="100" y1="260" x2="800" y2="260"/>
+<line class="gr" x1="100" y1="420" x2="800" y2="420"/>
+<line class="ax" x1="100" y1="450" x2="800" y2="450"/><text class="m s14 mu" x="100.0" y="476">W1</text><text class="m s14 mu" x="158.3" y="476">W2</text><text class="m s14 mu" x="216.7" y="476">W3</text><text class="m s14 mu" x="275.0" y="476">W4</text><text class="m s14 mu" x="333.3" y="476">W5</text><text class="m s14 mu" x="391.7" y="476">W6</text><text class="m s14 mu" x="450.0" y="476">W7</text><text class="m s14 mu" x="508.3" y="476">W8</text><text class="m s14 mu" x="566.7" y="476">W9</text><text class="m s14 mu" x="625.0" y="476">W10</text><text class="m s14 mu" x="683.3" y="476">W11</text><text class="m s14 mu" x="741.7" y="476">W12</text><text class="m s14 mu" x="800.0" y="476">W13</text>
+<line class="fl" x1="100" y1="350" x2="800" y2="350"/><text class="s14 b" x="104" y="340">Cash floor</text>
+<line class="ax" x1="275.0" y1="150" x2="275.0" y2="450" style="stroke-dasharray:3 5"/>
+<rect class="pill" x="128.7" y="124" width="292.6" height="28" rx="14"/><text class="oa m" x="275.0" y="143">Trigger hit: action case starts</text>
+<path class="li" d="M100.0,230.0 L158.3,235.0 L216.7,242.0 L275.0,250.0 L333.3,260.0 L391.7,272.0 L450.0,268.0 L508.3,260.0 L566.7,252.0 L625.0,246.0 L683.3,240.0 L741.7,236.0 L800.0,232.0"/><path class="ld" d="M100.0,230.0 L158.3,238.0 L216.7,254.0 L275.0,280.0 L333.3,312.0 L391.7,350.0 L450.0,386.0 L508.3,398.0 L566.7,394.0 L625.0,384.0 L683.3,376.0 L741.7,370.0 L800.0,366.0"/><path class="la" d="M100.0,230.0 L158.3,238.0 L216.7,254.0 L275.0,280.0 L333.3,296.0 L391.7,308.0 L450.0,318.0 L508.3,322.0 L566.7,316.0 L625.0,306.0 L683.3,296.0 L741.7,286.0 L800.0,278.0"/>
+<circle class="fi" cx="800.0" cy="232" r="6"/><text class="b" x="816.0" y="237">Base case</text>
+<circle class="fa" cx="800.0" cy="278" r="6"/><text class="b" x="816.0" y="283">Action case</text>
+<circle class="fi" cx="800.0" cy="366" r="6"/><text class="b" x="816.0" y="371">Downside case</text>
+<text class="mu" x="40" y="516">Not to scale. The downside case is tied to a specific event, such as a tariff increase on your</text>
+<text class="mu" x="40" y="534">largest import category. The action case shows your planned response keeping cash above the floor.</text>
+</svg>
+</div></div>
+
+<p>Run three versions of the forecast, each tied to something you can name.</p>
+<ul>
+<li><strong>Base case:</strong> your most supportable current expectation.</li>
+<li><strong>Downside case:</strong> credible pressure tied to specific events, such as a named tariff increase on your largest import category, collections slipping 2 weeks, or another quarter-point rate move. Avoid a uniform 10% haircut across every line; it hides which assumption hurts you.</li>
+<li><strong>Action case:</strong> the specific moves you'd make if the downside arrives, laid out in the forecast so you can see whether they work. For tariffs, that can mean pre-buying ahead of an announced increase, shifting volume to a supplier in a lower-duty country, reviewing your product classifications with a customs broker, or negotiating longer payment terms.</li>
+</ul>
+<p>If you want a longer view to set these against, the scenarios should tie back to your <a href="https://embarcadvisors.com/2027-budget-planning/" target="_blank" rel="noopener">2027 budget plan</a>, so the quarter and the year tell the same story.</p>
+<h2>Set your triggers before you need them</h2>
+<p>Pick a small number of measurable triggers in advance, and give each one an owner and a response deadline. Good candidates include minimum unrestricted cash, availability on your borrowing base, days sales outstanding (how long customers take to pay you), weekly collections, gross margin on your backlog, and covenant headroom.</p>
+<p>Decide what you'll do at each threshold while things are calm, so a bad week turns into a checklist item. If cash in week 5 drops under the floor, you already know whether you're delaying a distribution, drawing on the line or calling your three slowest payers.</p>
+<h2>Update the 13-week cash flow forecast every week</h2>
+<p>The forecast goes stale fast. Each week, drop the oldest column, add a new week 13, and compare what actually came in and went out with what you forecast. Explain any large or recurring variance. Those gaps usually expose something specific: billing that goes out late, collection assumptions that were too hopeful, unrecorded commitments, or operational reporting that arrives too slowly to use.</p>
+<p>Five questions keep the weekly review honest:</p>
+<ol>
+<li>When does cash hit its low point in the base case?</li>
+<li>Which three assumptions create the most downside exposure?</li>
+<li>What would you do if collections slipped 2 weeks?</li>
+<li>Do planned distributions and capital spending still hold up in the downside case?</li>
+<li>Can you explain last week's largest variance?</li>
+</ol>
+<h2>What a lender or buyer reads in it</h2>
+<p>Most lenders reading your forecast look at the lowest weekly ending balance before the closing one. They check whether debt service has its own line, whether receipts reflect how your customers really pay, whether the model is current, and whether you track how far off last week's forecast was.</p>
+<p>Buyers read the same signals. A forecast built on operational drivers, with variances you can explain, is one of the things that separates functional financials from buyer-ready ones. A monthly best guess is one of the 3 signs a <a href="https://embarcadvisors.com/where-fractional-cfo-engagements-plateau/" target="_blank" rel="noopener">fractional CFO engagement has plateaued</a>. As Lance Geda puts it in that piece:</p>
+<blockquote>
+<p>"Getting organized is a strong start, but it's not the finish line."</p>
+</blockquote>
+<p>A tariff-aware 13-week forecast is part of what <a href="https://embarcadvisors.com/what-buyers-look-for-financials/" target="_blank" rel="noopener">buyers look for in your financials</a>, because it shows you can spot a cash shortfall weeks before it reaches your bank account.</p>
+<p>You can start this week. Pull your last three tariff-affected invoices, compare each one with the landed cost your forecast assumed, and put the difference in the week you'll pay it. Then update the debt service row to the rate you're paying now, and check whether your lowest week moved.</p>
+  </div>
+
+  <aside class="next">
+    <div class="tile">
+      <h2>Read the other post</h2>
+      <p><a href="working-capital-peg.html" style="font-size:21px;font-weight:600;letter-spacing:-.02em;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:4px">Negotiate Your Working Capital Peg at the LOI</a></p>
+      <div class="btns">
+        <a class="btn primary" href="../index.html#blog">All posts <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="mailto:martinpav19@gmail.com">Email Martin</a>
+      </div>
+    </div>
+  </aside>
+</article>
+</main>
+<footer class="wrap">© <span id="yr"></span> Martin Pavlovic · martinpproduction.com</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('mode');
+  var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>';
+  var MOON='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>';
+  function setTheme(t){
+    root.setAttribute('data-theme',t);
+    btn.querySelector('.lbl').textContent=t==='dark'?'Light mode':'Dark mode';
+    btn.querySelector('.ico').innerHTML=t==='dark'?SUN:MOON;
+    btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');
+    var mc=document.querySelector('meta[name="theme-color"]');if(mc)mc.setAttribute('content',t==='dark'?'#01120E':'#ffffff');
+  }
+  var saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
+  setTheme(saved==='dark'?'dark':'light');
+  btn.addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    setTheme(n);try{localStorage.setItem('theme',n)}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
